@@ -14,19 +14,21 @@
 // }
 
 /** 2nd METHOD */
-function reverse(str) {
-  return str.split('').reverse().join('');
-}
+// function reverse(str) {
+//   debugger;
+//   return str.split('').reverse().join('');
+// }
 
 /** 3rd METHOD */
-// function reverse(str) {
-//   let reversed = '';
+function reverse(str) {
+  let reversed = '';
 
-//   for (let character of str) {
-//     reversed = character + reversed;
-//   }
-//   return reversed;
-// }
+  for (let character of str) {
+    //debugger;
+    reversed = character + reversed;
+  }
+  return reversed;
+}
 
 /** 4th METHOD */
 // function reverse(str) {
@@ -34,5 +36,7 @@ function reverse(str) {
 //     return character + reversed;
 //   }, '');
 // }
+
+reverse('aaaabbb');
 
 module.exports = reverse;
