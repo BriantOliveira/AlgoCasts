@@ -32,8 +32,16 @@
 //  return chuncked;
 // }
 
+// Solution 2
 function chunk(array, size) {
- 
+  const chuncked = [];
+  let index = 0;
+
+  while (index < array.length) {
+    chuncked.push(array.slice(index, index + size));
+    index += size;
+  }
+  return chuncked;
 }
 
 module.exports = chunk;
