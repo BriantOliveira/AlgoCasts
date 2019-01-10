@@ -12,6 +12,8 @@
 
 function maxChar(str) {
   const charsMap = {}
+  let max = 0;
+  let maxChar = '';
 
   for (let char of str) {
     if (charsMap[char]) {
@@ -20,12 +22,20 @@ function maxChar(str) {
       charsMap[char] = 1;
     }
   }
-
   /** Method 2  */
   // for (let char of str) {
   //   let test = chars[char] = chars[char] + 1 || 1;
   //   return test
   // }
+
+  for (let char in charsMap) {
+    if (charsMap[char] > max) {
+      max = charsMap[char];
+      maxChar = char;
+    }
+  }
+
+  return maxChar;
 }
 
 
